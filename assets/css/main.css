@@ -1397,8 +1397,6 @@ section,
   color: var(--accent-color);
 }
 
-
-
 /* =======================
    Skills Section Styling
 ======================= */
@@ -1406,7 +1404,7 @@ section,
   background-color: #030712;
   color: #fff;
   padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #skills .section-title h2 {
@@ -1487,7 +1485,7 @@ section,
 
 .skill-item:hover .skill-circle {
   transform: scale(1.2);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
 
 .skill-item:hover .skill-circle img {
@@ -1541,4 +1539,79 @@ section,
   .skill-item p {
     font-size: 0.75rem;
   }
+}
+#awards {
+  background-color: #030712;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+#awards .section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  /* color: #4dc7f3; */
+}
+
+#awards .section-title p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  /* color: #f7b500; */
+}
+
+.awards-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.awards-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.awards-carousel::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.award-item {
+  flex: 0 0 auto; /* keep natural size */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.award-item img {
+  display: block;
+  max-height: 250px; /* adjust as needed */
+  width: auto; /* keep original width */
+  height: auto; /* maintain aspect ratio */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.award-item:hover img {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }

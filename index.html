@@ -167,7 +167,9 @@
           <p class="tagline">Think. Build. Deliver.</p>
 
           <p>
-            Welcome! I create clean, responsive, and dynamic web experiences using the MERN stack. I specialize in turning ideas into real-world applications. Let’s collaborate to bring your project to life.
+            Welcome! I create clean, responsive, and dynamic web experiences
+            using the MERN stack. I specialize in turning ideas into real-world
+            applications. Let’s collaborate to bring your project to life.
           </p>
         </div>
       </section>
@@ -180,7 +182,11 @@
           <h2>About Me</h2>
           <p>
             I'm a self-taught web developer with project-based skills in the
-            MERN stack. I thrive on teamwork, solve problems creatively, and manage projects efficiently. I’ve built multiple full-stack applications, gaining expertise in front-end design, back-end development, RESTful APIs, and user authentication. I’m open to freelance work and collaboration to turn ideas into reality.
+            MERN stack. I thrive on teamwork, solve problems creatively, and
+            manage projects efficiently. I’ve built multiple full-stack
+            applications, gaining expertise in front-end design, back-end
+            development, RESTful APIs, and user authentication. I’m open to
+            freelance work and collaboration to turn ideas into reality.
           </p>
         </div>
         <!-- End Section Title -->
@@ -515,7 +521,7 @@
               <!-- End Resume Item -->
 
               <div class="resume-item">
-                <h4>Startup Team Member —Tutorial Platform</h4>
+                <h4>Startup Team Member — Tutorial Platform</h4>
                 <h5>2023 - Present</h5>
                 <p><em>Remote</em></p>
                 <ul>
@@ -594,7 +600,8 @@
                   />
                   <div class="portfolio-info">
                     <h2>Netflix Clone</h2>
-                    <p>React.js, Node.js, Express.js, MySQL</p>
+                    <p>A Netflix clone built with React.js.</p>
+
                     <a
                       href="https://github.com/devabdisa/Netflix-clone-react.js"
                       title="GitHub Repository"
@@ -619,13 +626,13 @@
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/Netflix.png"
+                    src="assets/img/portfolio/apple.png"
                     class="img-fluid"
                     alt="Netflix Clone"
                   />
                   <div class="portfolio-info">
-                    <h2>Netflix Clone</h2>
-                    <p>React.js, Node.js, Express.js, MySQL</p>
+                    <h2>Apple Clone</h2>
+                    <p>With React.js</p>
                     <a
                       href="https://github.com/devabdisa/Netflix-clone-react.js"
                       title="GitHub Repository"
@@ -965,6 +972,46 @@
 
       <!-- /Services Section -->
 
+      <!-- Awards & Achievements Section -->
+      <section id="awards" class="awards section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Achievements & Awards</h2>
+          <p>Recognitions, Awards, and Career Milestones</p>
+        </div>
+
+        <!-- Horizontal Scroll Carousel -->
+        <div class="awards-carousel" data-aos="fade-up" data-aos-delay="100">
+          <div class="award-item">
+            <img
+              src="assets/img/certificates/Abdisa_Internship__page-0001.jpg"
+              alt="Internship Certificate"
+            />
+          </div>
+          <div class="award-item">
+            <img
+              src="assets/img/certificates/cppandJava.jpg"
+              alt="Udemy Certificate"
+            />
+          </div>
+          <div class="award-item">
+            <img
+              src="assets/img/certificates/HTMLandCSS.jpg"
+              alt="ISC2 Certificate"
+            />
+          </div>
+          <div class="award-item">
+            <img
+              src="assets/img/certificates/Java.jpg"
+              alt="CCNAv7 Certificate"
+            />
+          </div>
+          <!-- Add more certificates here -->
+        </div>
+      </section>
+
+      <!-- Awards & Achievements Section -->
+
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <!-- Section Title -->
@@ -1116,8 +1163,9 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+    <div id="lightbox" class="lightbox">
+      <img src="" alt="Enlarged Certificate" />
+    </div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1133,5 +1181,24 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <!-- Awards JS -->
+
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = lightbox.querySelector("img");
+      const awardImages = document.querySelectorAll(".award-item img");
+
+      awardImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = img.src;
+        });
+      });
+
+      // Close lightbox when clicking anywhere
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+    </script>
   </body>
 </html>
