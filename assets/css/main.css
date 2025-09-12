@@ -1397,60 +1397,104 @@ section,
   color: var(--accent-color);
 }
 
-.skills-marquee {
-  overflow: hidden;
-  width: 100%;
-  padding: 20px 0;
+
+
+/* Skills Section */
+.skills {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
 }
 
-.skills-track {
-  display: flex;
+.skills .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skills .section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.skills .section-title p {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 30px;
+  justify-items: center;
   align-items: center;
-  animation: scrollSkills 5s linear infinite;
 }
 
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
-}
-
-.skill-circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: #f8f9fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
-.skill-circle img {
-  max-width: 60%;
-  max-height: 60%;
+.skill-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
-.skill-circle:hover {
-  transform: scale(1.2);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+.skill-item:hover img {
+  transform: scale(1.1);
 }
 
 .skill-item p {
   margin: 0;
   font-size: 14px;
+  color: #333;
   font-weight: 500;
 }
 
-/* Animation */
-@keyframes scrollSkills {
-  0% {
-    transform: translateX(0);
+/* Responsive */
+@media (max-width: 768px) {
+  .skills {
+    padding: 40px 15px;
   }
-  100% {
-    transform: translateX(-50%);
+
+  .skills .section-title h2 {
+    font-size: 28px;
+  }
+
+  .skills .section-title p {
+    font-size: 14px;
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-item p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    gap: 20px;
+  }
+
+  .skill-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-item p {
+    font-size: 12px;
   }
 }
