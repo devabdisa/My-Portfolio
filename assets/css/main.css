@@ -1399,102 +1399,146 @@ section,
 
 
 
-/* Skills Section */
-.skills {
+/* =======================
+   Skills Section Styling
+======================= */
+#skills {
+  background-color: #030712;
+  color: #fff;
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
 }
 
-.skills .section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.skills .section-title h2 {
-  font-size: 32px;
+#skills .section-title h2 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #111;
+  color: #fff;
 }
 
-.skills .section-title p {
-  font-size: 16px;
-  color: #555;
+#skills .section-title p {
+  font-size: 1rem;
+  color: #cfcfcf;
   max-width: 600px;
-  margin: 0 auto;
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
+/* =======================
+   Skills Grid
+======================= */
+.skills-marquee {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
+.skills-track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* =======================
+   Skill Items
+======================= */
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
-.skill-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-
-.skill-item:hover img {
-  transform: scale(1.1);
+  width: 100px;
+  margin-bottom: 30px;
 }
 
 .skill-item p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-  font-weight: 500;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  transition: color 0.3s;
 }
 
-/* Responsive */
+.skill-item:hover p {
+  color: #1db954; /* Highlight text on hover */
+}
+
+/* =======================
+   Skill Circle
+======================= */
+.skill-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(58, 151, 51, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-circle img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.skill-item:hover .skill-circle {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+.skill-item:hover .skill-circle img {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+/* =======================
+   Responsiveness
+======================= */
+@media (max-width: 1200px) {
+  .skill-item {
+    width: 90px;
+  }
+
+  .skill-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-item p {
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .skills {
-    padding: 40px 15px;
+  .skill-item {
+    width: 80px;
   }
 
-  .skills .section-title h2 {
-    font-size: 28px;
-  }
-
-  .skills .section-title p {
-    font-size: 14px;
-  }
-
-  .skill-item img {
+  .skill-circle {
     width: 60px;
     height: 60px;
   }
 
   .skill-item p {
-    font-size: 13px;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .skills-grid {
-    gap: 20px;
+  .skill-item {
+    width: 70px;
+    margin: 10px;
   }
 
-  .skill-item img {
+  .skill-circle {
     width: 50px;
     height: 50px;
   }
 
   .skill-item p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
